@@ -8,13 +8,12 @@ const CadastroPage = () => {
     const [email, setEmail] = useState("");
     const [nome, setNome] = useState("");
     const [date, setDate] = useState("");
-    const [sobrenome, setSobrenome] = useState("");
     const [password, setPassword] = useState("");
 
 
     const handleSubmit = (e) => {
         e.preventDefault();
-        console.log("submit, { nome, sobrenome, date, email, password} ");
+        console.log("submit, { nome, date, email, password} ");
     }
     return (
         <div id="login">
@@ -22,12 +21,8 @@ const CadastroPage = () => {
             <form className="form" onSubmit={handleSubmit} >
 
                 <div className="field">
-                    <label htmlFor="text">Nome </label>
+                    <label htmlFor="text">Nome Completo</label>
                     <input type="text" name="nome" id="nome" value={nome} onChange={(e) => setNome(e.target.value)} />
-                </div>
-                <div className="field">
-                    <label htmlFor="text">Sobrenome </label>
-                    <input type="text" name="sobrenome" id="sobrenome" value={sobrenome} onChange={(e) => setSobrenome(e.target.value)} />
                 </div>
                 <div className="field">
                     <label htmlFor="date">Data de Nascimento </label>
@@ -44,6 +39,7 @@ const CadastroPage = () => {
                 <div className="actions">
                     <button type="submit">Entrar</button>
                 </div>
+
             </form>
             <div>
                 <Link to="/LoginPage"  >Acessar com meu login</Link>
