@@ -1,7 +1,7 @@
-
 import react, { useState } from 'react';
 import { Link } from 'react-router-dom';
 import CadastroPage from './Cadastro/Page/CadastroPage'
+
 
 const LoginPage = () => {
 
